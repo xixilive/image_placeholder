@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotImage</title>
+    <link rel='stylesheet' href='/stylesheets/normalize.css' />
+    <link rel='stylesheet' href='/stylesheets/foundation.css' />
+    <link rel='stylesheet' href='/stylesheets/foundation-icons.css' />
+    <link rel='stylesheet' href='/stylesheets/app.css' />
+    <script type="text/javascript" src="/javascripts/modernizr.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">HotImage</a></h1>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="active"><a href="#">Right Nav Button Active</a></li>
+          <li class="has-dropdown">
+            <a href="#">Right Button with Dropdown</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li><a href="#">Left Nav Button</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="carsoul-container">
+      <div class="row">
+        <ul data-orbit style="height: 350px;">
+          <li class="active">
+            <img src="/g/1000x350" alt="slide 1" />
+            <div class="orbit-caption">
+              Live example: /g/1000x350
+            </div>
+          </li>
+          <li>
+            <img src="/g/1000x350/default" alt="slide 2" />
+            <div class="orbit-caption">
+              Live example: /g/1000x350/default
+            </div>
+          </li>
+          <li>
+            <img src="/g/1000x350/car" alt="slide 3" />
+            <div class="orbit-caption">
+              Live example: /g/1000x350/car
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-9 medium-8 columns">
+        <h1>Customize your place holder</h1>
+        <hr/>
+      </div>
+      <div class="large-3 medium-4 columns">
+        <div class="panel">
+          <a class="button"><i class="fi-star"></i>Donate us!</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/foundation.min.js"></script>
+    <script type="text/javascript" src="/javascripts/app.min.js"></script>
   </body>
 </html>
