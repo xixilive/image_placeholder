@@ -12,51 +12,40 @@
     <script type="text/javascript" src="/javascripts/modernizr.min.js"></script>
   </head>
   <body>
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="#">HotImage</a></h1>
-        </li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="active"><a href="#">Right Nav Button Active</a></li>
-          <li class="has-dropdown">
-            <a href="#">Right Button with Dropdown</a>
-            <ul class="dropdown">
-              <li><a href="#">First link in dropdown</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- Left Nav Section -->
-        <ul class="left">
-          <li><a href="#">Left Nav Button</a></li>
-        </ul>
-      </section>
-    </nav>
+    <h1 class="text-center">An Image Placeholder</h1>
 
     <div class="carsoul-container">
       <div class="row">
+        <h3 class="subheader">Live examples</h3>
         <ul data-orbit style="height: 350px;">
           <li class="active">
-            <img src="/g/1000x350" alt="slide 1" />
+            <img src="/g/1000x350/ddd/c00" alt="slide 1" />
             <div class="orbit-caption">
-              Live example: /g/1000x350
+              <h4>&lt;img src=/g/1000x350/ddd/c00 /&gt;</h4>
             </div>
           </li>
           <li>
             <img src="/g/1000x350/default" alt="slide 2" />
             <div class="orbit-caption">
-              Live example: /g/1000x350/default
+              <h4>&lt;img src=/g/1000x350/default /&gt;</h4>
             </div>
           </li>
           <li>
             <img src="/g/1000x350/car" alt="slide 3" />
             <div class="orbit-caption">
-              Live example: /g/1000x350/car
+              <h4>&lt;img src=/g/1000x350/car /&gt;</h4>
+            </div>
+          </li>
+          <li>
+            <img src="/g/1000x350/beauty" alt="slide 3" />
+            <div class="orbit-caption">
+              <h4>&lt;img src=/g/1000x350/beauty /&gt;</h4>
+            </div>
+          </li>
+          <li>
+            <img src="/g/1000x350/food" alt="slide 3" />
+            <div class="orbit-caption">
+              <h4>&lt;img src=/g/1000x350/food /&gt;</h4>
             </div>
           </li>
         </ul>
@@ -64,19 +53,44 @@
     </div>
 
     <div class="row">
-      <div class="large-9 medium-8 columns">
-        <h1>Customize your place holder</h1>
-        <hr/>
-      </div>
-      <div class="large-3 medium-4 columns">
-        <div class="panel">
-          <a class="button"><i class="fi-star"></i>Donate us!</a>
-        </div>
+      <h2 class="subheader">URL patterns</h2>
+      <div class="panel radius">
+        <h4 class="subheader">
+          /g/WIDTH x HEIGHT/BGCOLOR/FORECOLOR
+          <a href="/g/200x100/000/fff" class="button tiny round" rel="demo">DEMO</a>
+        </h4>
+
+        <h4 class="subheader">
+          /g/SIDE_LENGTH/BGCOLOR/FORECOLOR
+          <a href="/g/300/000/fff" class="button tiny round" rel="demo">DEMO</a>
+        </h4>
+
+        <h4 class="subheader">
+          /g/WIDTH x HEIGHT/THEME
+          <a href="/g/500x300/beauty" class="button tiny round" rel="demo">DEMO</a>
+        </h4>
+
+        <h4 class="subheader">
+          /g/SIDE_LENGTH/THEME
+          <a href="/g/500/car" class="button tiny round" rel="demo">DEMO</a>
+        </h4>
+
+        <p>Avalible themes are: default, car, beauty, food</p>
       </div>
     </div>
+
+    <div id="demo-modal" class="reveal-modal small" data-reveal></div>
 
     <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/foundation.min.js"></script>
     <script type="text/javascript" src="/javascripts/app.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("a[rel=demo]").on('click', function(e){
+        e.preventDefault();
+        $('#demo-modal').html('<img src="'+$(this).attr('href')+'" style="display:block;margin: auto;" />').foundation('reveal', 'open');
+      });
+    });
+    </script>
   </body>
 </html>
