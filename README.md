@@ -4,6 +4,12 @@
 node app.js
 ```
 
+# Demo on Heroku
+
+https://morning-reaches-6147.herokuapp.com/
+
+also http://i.cloudink.cn
+
 ## URL patterns
 
 > /g/WIDTH x HEIGHT/BGCOLOR/FORECOLOR
